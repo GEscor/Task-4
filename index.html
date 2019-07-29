@@ -6,79 +6,312 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Task-4</title>
     <style type="text/css">
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            width: 400px;
+            margin: 20px auto;
+            font-size: 0;
+        }
+        .corner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        .upper-row,
+        .lower-row {
+            display: inline-block;
+            width: 320px;
+            height: 40px;
+        }
+        .upper-row-letter,
+        .lower-row-letter,
+        .left-column-number,
+        .right-column-number {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: bottom;
+            line-height: 40px;
+            font-size: 20px;
+        }
+        .left-column,
+        .right-column {
+            display: inline-block;
+            width: 40px;
+            height: 320px;
+        }
+        .field {
+            display: inline-block;
+            width: 320px;
+            font-size: 0;
+            outline: 1px solid black;
+        }
         .cell {
-            display: block;
-            width: 20px;
-            height: 20px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        .selected {
+            background-color: blue !important;
+        }
+        .possible {
+            background-color: green !important;
         }
     </style>
 </head>
 <body>
-    <div class="field">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+    <div class="container">
+        <div class=corner></div>
+        <div class="upper-row">
+            <div class="upper-row-letter"></div>
+            <div class="upper-row-letter"></div>
+            <div class="upper-row-letter"></div>
+            <div class="upper-row-letter"></div>
+            <div class="upper-row-letter"></div>
+            <div class="upper-row-letter"></div>
+            <div class="upper-row-letter"></div>
+            <div class="upper-row-letter"></div>
+        </div>
+        <div class="corner"></div>
+
+        <div class="left-column">
+            <div class="left-column-number"></div>
+            <div class="left-column-number"></div>
+            <div class="left-column-number"></div>
+            <div class="left-column-number"></div>
+            <div class="left-column-number"></div>
+            <div class="left-column-number"></div>
+            <div class="left-column-number"></div>
+            <div class="left-column-number"></div>
+        </div>
+        <div class="field">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="right-column">
+                <div class="right-column-number"></div>
+                <div class="right-column-number"></div>
+                <div class="right-column-number"></div>
+                <div class="right-column-number"></div>
+                <div class="right-column-number"></div>
+                <div class="right-column-number"></div>
+                <div class="right-column-number"></div>
+                <div class="right-column-number"></div>
+            </div>
+
+            <div class="corner"></div>
+            <div class="lower-row">
+                <div class="lower-row-letter"></div>
+                <div class="lower-row-letter"></div>
+                <div class="lower-row-letter"></div>
+                <div class="lower-row-letter"></div>
+                <div class="lower-row-letter"></div>
+                <div class="lower-row-letter"></div>
+                <div class="lower-row-letter"></div>
+                <div class="lower-row-letter"></div>
+            </div>
+            <div class="corner"></div>
+
     </div>
+    
+    <script>
+        // Клетки поля
+        const cells = document.querySelectorAll(".cell");
+        // Модификатор смены цвета при раскраске клеток поля
+        let s = 0;
+        // Цвета клеток поля и резервная ячейка для смены цвета
+        let color1 = "white";
+        let color2 = "black";
+        let c;
+        // Массивы с буквенными и численными наименованиями колонок и рядов поля
+        let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+        let numbers = ['1', '2', '3', '4', '5', '6', '7', '8'];
+        // Data массив с обозначениями клеток поля
+        let dataCell = [];
+        // Формирвоание Data массива с обозначчениями клеток поля
+        for (let i = 7; i >= 0; i--){
+            for (let j = 0; j < 8; j++) {
+                dataCell.push(letters[j] + numbers[i])
+            }
+        }
+        // Боковые ячейки для обозначения колонок и рядов
+        let upperRowLetters = document.querySelectorAll('.upper-row-letter');
+        let lowerRowLetters = document.querySelectorAll('.lower-row-letter');
+        let leftColumnNumbers = document.querySelectorAll('.left-column-number');
+        let rightColumnNumber = document.querySelectorAll('.right-column-number');
+        // Расстановка обозначений по краям поля
+        for (let i = 0; i < 8; i++) {
+            upperRowLetters[i].innerHTML = letters[i];
+            lowerRowLetters[i].innerHTML = letters[i];
+            leftColumnNumbers[i].innerHTML = numbers[7 - i];
+            rightColumnNumber[i].innerHTML = numbers[7 - i];
+        }
+        // Расстановка Data атрибутов клеток поля, 
+        // окрашивание их в черный и белый цветб
+        // добавление обаботчика нажатий на клетку поля
+        for (let i = 0; i < cells.length; i++) {
+            cells[i].setAttribute('data-cell', dataCell[i]);
+
+            if (i % 2 === 0) {
+                cells[i].style.backgroundColor = color1;
+            } else {
+                cells[i].style.backgroundColor = color2;
+            }
+            s++
+            //Меняем порядок цветов после каждых восьми клеток
+            if (s === 8) {
+                c = color1;
+                color1 = color2;
+                color2 = c;
+                s = 0;
+            }
+            cells[i].addEventListener('click', function(event) {cellClick(event)});
+        }
+        // Выбранная клетка
+        let selected;
+        // Клетки возхможных ходов 
+        let possible = [];
+        // Функция обработки нажатий на клетку поля
+        cellClick = (event) => {
+            // Сброс подсветки предыдущей выбранной клетки
+            if (selected) {
+                selected.classList.remove('selected');
+            }
+            // Сброс подсветки предыдущих возможных ходов
+            if (possible.length > 0) {
+                possible.forEach(element => {
+                    element.classList.remove('possible');
+                });
+                possible = [];
+            }
+            // Сохраняем выделенную клетку
+            selected = event.target;
+            selected.classList.add('selected');
+            // Определяем возможные ходы
+            calculate(event.target. dataset.cell);
+            return;
+        }
+        let moves = [];
+        // Функция вычисления вариантов хода для выбранной ячейки
+        // аналогичная использованной  в задании 2
+        calculate = (cell) => {
+            const value = cell;
+            const letter = letters.indexOf(value[0]); //исходная колонка
+            const number = parseInt(value[1], 10) - 1; //исходный ряд
+            // проверки
+            if (letters[letter - 2]) {
+                if (numbers[number - 1]) {
+                    moves.push(letters[letter - 2] + numbers[number - 1])
+                } 
+                if (numbers[number + 1]) {
+                    moves.push(letters[letter - 2] + numbers[number + 1]) 
+                }
+            }
+
+            if (letters[letter - 1]) {
+                if (numbers[number - 2]) {
+                    moves.push(letters[letter - 1] + numbers[number - 2]);
+                } 
+                if (numbers[number + 2]) {
+                    moves.push(letters[letter - 1] + numbers[number + 2]);
+                }
+            }
+
+            if (letters[letter + 1]) {
+                if (numbers[number - 2]) {
+                    moves.push(letters[letter + 1] + numbers[number - 2]);
+                }
+                if (numbers[number + 2]) {
+                    moves.push(letters[letter + 1] + numbers[number + 2]);
+                }
+            }
+
+            if (letters[letter + 2]) {
+                if (numbers[number - 1]) {
+                    moves.push(letters[letter + 2] + numbers[number - 1]);
+                }
+                if (numbers[number + 1]) {
+                    moves.push(letters[letter + 2] + numbers[number + 1]);
+                }
+            }
+            moves.forEach(element => {
+                const value = "[data-cell=" + element + "]";
+                possible.push(document.querySelector(value));
+            });
+            moves = [];
+            colorise(possible);
+        }
+        // Функция окрашивает клетки, соответствующие возможным ходам
+        colorise = (possible) => {
+            possible.forEach(element =>{
+                element.classList.add('possible');
+            });
+        }
+    </script>
 </body>
 </html>
